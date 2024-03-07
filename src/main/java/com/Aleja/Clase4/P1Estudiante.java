@@ -3,7 +3,7 @@ package com.Aleja.Clase4;
 public class P1Estudiante {
 
     private Integer id;
-    private String nombre;
+    public String nombre;
     private String apellido;
     private Float promedio;
 
