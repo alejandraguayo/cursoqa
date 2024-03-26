@@ -20,7 +20,8 @@ public class BaseTest {
         options.addArguments("start-maximized");
         options.addArguments("incognito");
 
-//        options.addArguments("headless");
+
+//       options.addArguments("headless");
 
         options.setPageLoadTimeout(Duration.ofSeconds(60));
 
