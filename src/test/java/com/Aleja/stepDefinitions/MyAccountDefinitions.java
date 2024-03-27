@@ -2,17 +2,18 @@ package com.Aleja.stepDefinitions;
 
 import com.Aleja.Pages.MyAccountPage;
 import com.Aleja.hooks.Hooks;
+import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import org.testng.Assert;
 
 public class MyAccountDefinitions {
-   private MyAccountPage myAccountPage;
-   public MyAccountDefinitions (){
-       this.myAccountPage = new MyAccountPage(Hooks.getDriver());
-   }
+    private MyAccountPage myAccountPage;
+    public MyAccountDefinitions (){
+        this.myAccountPage = new MyAccountPage(Hooks.getDriver());
+    }
     @Entonces("el usuario se encuentra en su cuenta")
     public void elUsuarioSeEncuentraEnSuCuenta() {
 
-       Assert.assertTrue(myAccountPage.titleIsDisplayed());
+        Assert.assertTrue(myAccountPage.titleIsDisplayed());
     }
 }

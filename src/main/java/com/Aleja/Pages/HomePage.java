@@ -35,7 +35,8 @@ public class HomePage {
         WebElement myAccountEl = driver.findElement(myAccountBy);
         return myAccountEl.isDisplayed();
     }
-    public void clickMyAccount(){
+
+    public void clickMyAccount() {
         By myAccountBy = By.xpath("//a[@title= \' My Account \' ] ");
         WebElement myAccountEl = driver.findElement(myAccountBy);
         myAccountEl.click();
@@ -50,3 +51,6 @@ public class HomePage {
         loginEl.click();
     }
 }
+
+
+
