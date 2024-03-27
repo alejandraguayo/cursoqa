@@ -1,4 +1,4 @@
-package cursoqa.clase7;
+package com.Aleja.clase7;
 
 import com.Aleja.Clase7.Soldado;
 import org.testng.Assert;

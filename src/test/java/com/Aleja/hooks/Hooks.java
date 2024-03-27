@@ -1,19 +1,17 @@
-package cursoqa.clase8;
+package com.Aleja.hooks;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
+public class Hooks {
+    private static WebDriver driver;
 
-public class BaseTest {
-
-    private WebDriver driver;
-
-    @BeforeMethod
+    @Before
     public void setup() {
         ChromeOptions options = new ChromeOptions();
 
@@ -27,17 +25,18 @@ public class BaseTest {
 
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 
-        this.driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
-    @AfterMethod
+    @After
     public void tearDown() {
-        if (this.driver != null) {
-            this.driver.quit();
+        if (driver != null) {
+           driver.quit();
         }
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
+
         return driver;
     }
 }
